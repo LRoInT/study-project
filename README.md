@@ -17,3 +17,6 @@
 [???](???)
 
 未开发
+
+## 配置
+download.bat/download.sh:下载项目仓库

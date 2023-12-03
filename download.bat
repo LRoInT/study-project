@@ -1,6 +1,6 @@
 @echo off
 :restart
-set /p input=请输入一个字符串:
+set /p input=下载模块:
 if "%input%"=="all" (
     echo 下载全部模块
     echo learn-note-project

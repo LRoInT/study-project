@@ -1,4 +1,5 @@
-# learn-note-project
+# STUDY-PROJECT
+
 ## 介绍
 笔记整理项目策划
 

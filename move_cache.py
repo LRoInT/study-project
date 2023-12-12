@@ -10,5 +10,11 @@ def walk_file(root, rfun=os.system):
             for f in f_list[1]:
                 walk_file(os.path.join(f_dir, f))
             os.rmdir(f_dir)
+        elif "__pycache__" in f_dir:
+            for f in f_list[2]:
+                os.system(f"del {os.path.join(f_dir, f)}")
+            for f in f_list[1]:
+                walk_file(os.path.join(f_dir, f))
+            os.rmdir(f_dir)
 walk_file(".")
 

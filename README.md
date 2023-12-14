@@ -2,11 +2,12 @@
 
 ## 介绍
 
-笔记整理项目策划
-
 [策划](https://gitee.com/LRoInt/study-project)
 
-### 内容
+笔记整理项目策划
+此目录下除附属仓库外为项目 管理/汇总/概括性文档
+
+### 存储
 
 [study-note](https://gitee.com/LRoInt/study-note)
 
@@ -16,8 +17,7 @@
 
 [study-program](https://gitee.com/LRoInt/study-program)
 
-应用部分，对笔记内容的处理显示
-（此部分考虑开源）
+软件部分，对笔记内容的处理显示
 
 ### 衍生
 

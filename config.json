@@ -1,0 +1,17 @@
+{
+    "load": {
+        "gitee": [
+            "gitee.com",
+            "LRoInT/"
+        ],
+        "github": [
+            "github.com",
+            "LRoInT/"
+        ]
+    },
+    "project": "study-project",
+    "project_list": {
+        "note": "study-note",
+        "program": "study-program"
+    }
+}

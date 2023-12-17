@@ -1,22 +1,30 @@
-# learn-note-project
-## 介绍
-笔记整理项目策划
+# STUDY-PROJECT
 
-### 信息
+## 介绍
+
+[策划](https://gitee.com/LRoInt/study-project)
+
+笔记整理项目策划
+此目录下除附属仓库外为项目 管理/汇总/概括性文档
+
+### 存储
+
 [study-note](https://gitee.com/LRoInt/study-note)
 
 笔记具体内容部分
 
-### 应用
+### 软件
+
 [study-program](https://gitee.com/LRoInt/study-program)
 
-应用部分，对笔记内容的处理显示
-（此部分考虑开源）
+软件部分，对笔记内容的处理显示
 
 ### 衍生
+
 [???](???)
 
 未开发
 
 ## 配置
-download.bat/download.sh:下载项目仓库
+
+manager: 项目管理工具

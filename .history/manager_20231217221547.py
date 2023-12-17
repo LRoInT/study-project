@@ -13,7 +13,8 @@ download = partial(download.download, config=config, way=down_way) #固定 downl
 
 
 def git():
-    push = os.path.join(root, "git-push.bat")
+    push = open(os.path.join(root, "git-push.bat"),
+                "r", encoding="utf-8").read()
     os.system(push)
     for d in config['project_list']:
         os.chdir(os.path.join(root, config['project_list'][d]))

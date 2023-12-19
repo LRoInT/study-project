@@ -15,7 +15,7 @@
 
 ### 软件
 
-[study-program](https://gitee.com/LRoInt/study-program)
+[study-program](https://gitee.com/LRoInt/study-program) **!由于技术不成熟, 暂停此部分开发!**
 
 软件部分，对笔记内容的处理显示
 

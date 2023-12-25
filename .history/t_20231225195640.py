@@ -1,11 +1,11 @@
-def react(*func, start, debug=len, time: int = 1):
+def react(*func, start, debug=pass, time: int = 1):
     in_argv = start
     for i in range(time):
         for i in range(len(func)):
-            for j in range(i+1):
+            for j in range(i):
                 in_argv = func[j](in_argv)
                 try:
-                    debug(in_argv,func[j].__name__)
+                    debug(in_argv)
                 except:
                     pass
     return in_argv
@@ -20,7 +20,7 @@ def b(i):
 
 
 def c(i):
-    return int(i / 2)
+    return i ** 2
 
 
-print(react(a, b, c, start=1, time=10,debug=print))
+react(a, b, c, start=5, time=2)

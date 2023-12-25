@@ -1,0 +1,23 @@
+def react(*func, start, debug=, time: int = 1):
+    in_argv = start
+    for i in range(time):
+        for i in range(len(func)):
+            for j in range(i):
+                in_argv = func[j](in_argv)
+                debug(in_argv)
+    return in_argv
+
+
+def a(i):
+    return i + 1
+
+
+def b(i):
+    return i * 2
+
+
+def c(i):
+    return i ** 2
+
+
+react(a, b, c, start=5, time=2)

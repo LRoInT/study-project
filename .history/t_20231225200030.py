@@ -20,7 +20,7 @@ def b(i):
 
 
 def c(i):
-    return int(i / 2)
+    return i ** 2
 
 
-print(react(a, b, c, start=1, time=10,debug=print))
+print(react(a, b, c, start=5, time=2,debug=print))

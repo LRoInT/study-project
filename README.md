@@ -2,7 +2,7 @@
 
 ## 介绍
 
-[策划](https://gitee.com/LRoInt/study-project)
+[策划](/LRoInt/study-project)
 
 笔记整理项目策划
 此目录下除附属仓库外为项目 管理/汇总/概括性文档

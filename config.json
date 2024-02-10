@@ -9,8 +9,8 @@
             "LRoInT/"
         ]
     },
-    "project": "study-project",
     "project_list": {
+        "project": "study-project",
         "note": "study-note",
         "program": "study-program"
     }

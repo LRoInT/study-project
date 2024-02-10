@@ -1,6 +1,6 @@
 .study-note
 .study-program
-./.history
+.history
 .vscode
 ./test
 .t.py

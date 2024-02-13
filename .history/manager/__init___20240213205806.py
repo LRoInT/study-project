@@ -59,5 +59,5 @@ def git_cmd(path,commit, branch):
     for c in cmd():
         if system(c):
             print(f"{c} failed")
-            return None
+            break
     print("git push/pull done")

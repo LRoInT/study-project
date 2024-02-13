@@ -4,11 +4,9 @@ import sys
 import os
 import json
 import getopt
-from functools import partial
 from datetime import datetime
 
 config = json.load(open("config.json", "r", encoding="utf-8"))
-cmd_project=partial(cmd_project, config=config)
 root = os.path.dirname(os.path.abspath(__file__))  # 项目根目录
 cwd = root  # 工作目录
 down_way = "git@"  # 仓库下载方式，默认为 ssh
@@ -34,11 +32,10 @@ def print_help():
 
 if sys.argv[1:]:
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "d:hs:w:r:c:b:", [
+        opts, args = getopt.getopt(sys.argv[1:], "d:hs:w:r:c:", [
                                    "download=", "way=", "site=", "repository=", "commit=", "branch="])
     except getopt.GetoptError:
         print("输入异常")
-        sys.exit(2)
     for i in opts:
         if i[0] == "-w" or i[0] == "--way":
             down_way = i[1]

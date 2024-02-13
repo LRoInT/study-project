@@ -34,7 +34,7 @@ def print_help():
 
 if sys.argv[1:]:
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "d:hs:w:r:c:b:", [
+        opts, args = getopt.getopt(sys.argv[1:], "d:hs:w:r:c:", [
                                    "download=", "way=", "site=", "repository=", "commit=", "branch="])
     except getopt.GetoptError:
         print("输入异常")

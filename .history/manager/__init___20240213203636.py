@@ -2,9 +2,8 @@ import os
 
 
 def clone_link(func):
-    def wrapper(*args):
-        print(f"Run command {args[0]}")
-        func(args[0])
+    def wrapper(*args, **kwargs):
+        print(args)
     return wrapper
 
 
@@ -18,15 +17,8 @@ def cmd_project(cmd, config):
         return list(config["project"].values())  # 全部仓库
     elif cmd == "all-":
         return list(config["project"].values())[1:]  # 除根仓库外
-    elif cmd in config["project_list"]:
+    elif cmd in config["project"]:
         return [config["project"][cmd]]
-    elif cmd==".":
-        if os.path.exists(".git") and os.path.isdir(".git"):
-            remote=os.popen("git remote -v").readlines()[0]
-            remote=remote[:remote.rindex(".git")].split("/")[-1]
-            return [remote]
-        else:
-            return []
 
 
 def clone_project(project, config, site, down_way):
@@ -43,9 +35,9 @@ def clone_project(project, config, site, down_way):
 git_cmd_list = [
     "git init",
     "git add .",
-    "git commit -m '{0}'",
-    "git pull {0}",
-    "git push {0}"
+    "git commit -m '{}'",
+    "git pull {}"
+    "git push {}",
 ]
 
 
@@ -54,10 +46,7 @@ def git_cmd(path,commit, branch):
     def cmd():
         git_cmd_list[2] = git_cmd_list[2].format(commit)
         git_cmd_list[3] = git_cmd_list[3].format(branch)
-        git_cmd_list[4] = git_cmd_list[4].format(branch)
+        git_cmd_list[4] = git_cmd_list[4].format(path)
         return git_cmd_list
     for c in cmd():
-        if system(c):
-            print(f"{c} failed")
-            break
-    print("git push/pull done")
+        system(c)

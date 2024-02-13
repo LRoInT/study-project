@@ -2,9 +2,8 @@ import os
 
 
 def clone_link(func):
-    def wrapper(*args):
-        print(f"Run command {args[0]}")
-        func(args[0])
+    def wrapper(*args, **kwargs):
+        print(args)
     return wrapper
 
 

@@ -34,11 +34,10 @@ def print_help():
 
 if sys.argv[1:]:
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "d:hs:w:r:c:b:", [
+        opts, args = getopt.getopt(sys.argv[1:], "d:hs:w:r:c:", [
                                    "download=", "way=", "site=", "repository=", "commit=", "branch="])
     except getopt.GetoptError:
         print("输入异常")
-        sys.exit(2)
     for i in opts:
         if i[0] == "-w" or i[0] == "--way":
             down_way = i[1]

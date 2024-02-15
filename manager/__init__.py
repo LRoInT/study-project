@@ -57,6 +57,7 @@ def git_cmd(path,commit, branch):
         git_cmd_list[4] = git_cmd_list[4].format(branch)
         return git_cmd_list
     for c in cmd():
+        r=system(c)
         if system(c):
             print(f"{c} failed")
             return None

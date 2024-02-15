@@ -2,8 +2,9 @@ import os
 
 
 def clone_link(func):
-    def wrapper(*args, **kwargs):
-        print(args)
+    def wrapper(*args):
+        print(f"Run command '{args[0]}'")
+        func(args[0])
     return wrapper
 
 
@@ -43,8 +44,8 @@ git_cmd_list = [
     "git init",
     "git add .",
     "git commit -m '{0}'",
-    "git pull {0}"
-    "git push {0}",
+    "git pull {0}",
+    "git push {0}"
 ]
 
 
@@ -53,7 +54,11 @@ def git_cmd(path,commit, branch):
     def cmd():
         git_cmd_list[2] = git_cmd_list[2].format(commit)
         git_cmd_list[3] = git_cmd_list[3].format(branch)
-        git_cmd_list[4] = git_cmd_list[4].format(path)
+        git_cmd_list[4] = git_cmd_list[4].format(branch)
         return git_cmd_list
     for c in cmd():
-        system(c)
+        r=system(c)
+        if system(c):
+            print(f"{c} failed")
+            return None
+    print("git push/pull done")
